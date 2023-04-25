@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:tweet_planner/giphy.dart';
+import 'credentials.dart';
 import 'screens/write.dart';
-final supabaseUrl = 'https://qvxuhaqiyeudixntmuur.supabase.co';
-final supabaseKey = String.fromEnvironment('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF2eHVoYXFpeWV1ZGl4bnRtdXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMTU3NzgsImV4cCI6MTk5Nzg5MTc3OH0.U9CyKz97JY7BF3l5bUwAnbrOQa3mVL0I1iuuLEYFyIM');
 Future<void> main() async {
   await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
+  //await Supabase.initialize(url: 'https://qvxuhaqiyeudixntmuur.supabase.co', anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF2eHVoYXFpeWV1ZGl4bnRtdXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMTU3NzgsImV4cCI6MTk5Nzg5MTc3OH0.U9CyKz97JY7BF3l5bUwAnbrOQa3mVL0I1iuuLEYFyIM');
   runApp(const MyApp());
 }
-//final supabase = Supabase.instance.client;
+final supabase = Supabase.instance.client;
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    print(Supabase.instance.client.storageUrl);
+    //print(Supabase.instance.client.storageUrl);
     return MaterialApp(
       title: 'Tweet Planner',
       theme: ThemeData(
