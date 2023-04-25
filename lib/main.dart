@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:tweet_planner/giphy.dart';
 import 'screens/write.dart';
-final supabaseUrl = 'https://qvxuhaqiyeudixntmuur.supabase.co';
-final supabaseKey = String.fromEnvironment('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF2eHVoYXFpeWV1ZGl4bnRtdXVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIzMTU3NzgsImV4cCI6MTk5Nzg5MTc3OH0.U9CyKz97JY7BF3l5bUwAnbrOQa3mVL0I1iuuLEYFyIM');
+final supabaseUrl = 'my url';
+final supabaseKey = String.fromEnvironment('my anon key');
 Future<void> main() async {
   await Supabase.initialize(url: supabaseUrl, anonKey: supabaseKey);
   runApp(const MyApp());
